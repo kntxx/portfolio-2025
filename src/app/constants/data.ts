@@ -117,7 +117,7 @@ export const projects: Project[] = [
     title: "Cares Platform: PMS",
     subtitle: "Role: UI/UX Lead & Frontend",
     description:
-      "Led the end-to-end product design and frontend development for Ramon Aboitiz Foundation Inc. (RAFI) healthcare initiative. Translated complex business requirements into high-fidelity Figma prototypes and a fully functional React.js application, delivering 100% of the requested features for patient screening. ",
+      "Led the end-to-end product design for Ramon Aboitiz Foundation Inc. (RAFI) healthcare initiative. Translated complex business requirements into high-fidelity Figma prototypes and a fully functional React.js application, delivering 100% of the requested features for patient screening. ",
     tags: ["Figma", "React.js", "Tailwind CSS", "Enterprise UX"],
     image: "/cares-platform.png",
     github: "https://github.com/kntxx/cares_platform",
@@ -213,7 +213,7 @@ export const certifications: Certification[] = [
     name: "Creative Web Design",
     issuer: "TESDA Call Center Academy",
     code: "CCA-CWD-000589",
-    date: "2025",
+    date: "2023",
     link: "#",
     icon: TbCertificate,
   },
