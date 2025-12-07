@@ -6,6 +6,8 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { fadeIn } from "./variants";
 import { enqueueSnackbar } from "notistack";
+import { FiGithub, FiLinkedin, FiMail, FiSend } from "react-icons/fi";
+
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [showMessage, setShowMessage] = useState(false);
@@ -43,67 +45,146 @@ const Contact = () => {
         );
     }
   };
+
   return (
-    <section
-      id="contact"
-      className="section flex items-center h-screen lg:h-[76vh]"
-    >
-      <div className="container mx-auto">
-        <div
-          className=" justify-between items-center lg:p-[60px] flex flex-col  text-center lg:text-left lg:flex-row md:items-center
-        
-        gap-y-11"
+    <section id="contact" className="py-20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          variants={fadeIn("right", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          className="text-center mb-16"
         >
-          <motion.div
-            variants={fadeIn("right", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            className="font-neue "
-          >
-            <h4 className="text-[1.6rem] md:text-[2rem]  lg:text-[2.5rem] font-meduim ">
-              Contact Me
-            </h4>
-            <h2 className="mt-5 max-w-[480px] font-roman text-lightgray text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] tracking-wide ">
-              I'd love to hear from you! feel free to reach out with any
-              questions or suggestions.
-            </h2>
-          </motion.div>
-          <motion.div
-            variants={fadeIn("right", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            className=" shadow-xl rounded-2xl flex flex-col  gap-y-6 pb-24 p-6 items-start  md:w-[400px] lg:w-[500px] border h-[400px] text-left"
-          >
-            <form ref={form} onSubmit={sendEmail} className="">
-              <input
-                type="text"
-                placeholder="Your Name"
-                name="to_name"
-                required
-                className="bg-transparent font-neue font-normal border-b  border-black max-w-[300px] py-3 outline-none w-full placeholder:text-lightgray transition-all"
-              />
-              <input
-                type="email"
-                name="from_name"
-                placeholder="Your Email"
-                required
-                className="bg-transparent font-neue font-normal border-b border-black max-w-[300px] py-3 outline-none w-full placeholder:text-lightgray  transition-all"
-              />
-              <textarea
-                name="message"
-                required
-                className="bg-transparent font-neue font-normal resize-none mb-12 border-b border-black py-12 outline-none w-full placeholder:text-lightgray  transition-all"
-                placeholder="Message"
-              ></textarea>
-              <button
-                type="submit"
-                value="Send"
-                className="w-full font-neue font-roman cursor-pointer tracking-wide text-[16px] flex justify-center py-2 px-4 border border-black/40 rounded-md text-lightgray hover:text-black focus:outline-none focus:ring-2 focus:ring-gray-200"
-              >
-                Submit
-              </button>
-            </form>
-          </motion.div>
+          <h1 className="text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] font-bold">
+            Get In Touch
+          </h1>
+          <p className="text-lightgray text-sm md:text-base mt-2">
+            Have a question or want to work together?
+          </p>
+        </motion.div>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Side - Contact Info */}
+            <motion.div
+              variants={fadeIn("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              className="flex flex-col justify-center"
+            >
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+                Let's connect
+              </h2>
+              <p className="text-lightgray leading-relaxed mb-8">
+                I'm currently looking for Cloud Engineering internship
+                opportunities. Whether you have a question or just want to say
+                hi, I'll try my best to get back to you!
+              </p>
+
+              {/* Contact Links */}
+              <div className="space-y-4">
+                <a
+                  href="mailto:kentatixx@gmail.com"
+                  className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:border-black transition-colors group"
+                >
+                  <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-black group-hover:text-white transition-colors">
+                    <FiMail className="text-xl" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-lightgray">Email</p>
+                    <p className="font-medium">kentjoseph.gesoro@ctu.edu.ph</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/kent-joseph-gesoro-69b399259/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:border-black transition-colors group"
+                >
+                  <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-black group-hover:text-white transition-colors">
+                    <FiLinkedin className="text-xl" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-lightgray">LinkedIn</p>
+                    <p className="font-medium">linkedin.com/in/kentgesoro</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://github.com/kntxx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:border-black transition-colors group"
+                >
+                  <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-black group-hover:text-white transition-colors">
+                    <FiGithub className="text-xl" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-lightgray">GitHub</p>
+                    <p className="font-medium">github.com/kentgesoro</p>
+                  </div>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right Side - Form */}
+            <motion.div
+              variants={fadeIn("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              className="p-8 border border-gray-200 rounded-2xl"
+            >
+              <h3 className="text-xl font-semibold mb-6">Send me a message</h3>
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                <div>
+                  <label className="text-sm text-lightgray mb-2 block">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    name="to_name"
+                    required
+                    className="bg-transparent border border-gray-200 rounded-lg px-4 py-3 outline-none w-full placeholder:text-lightgray focus:border-black transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="text-sm text-lightgray mb-2 block">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="from_name"
+                    placeholder="Your Email"
+                    required
+                    className="bg-transparent border border-gray-200 rounded-lg px-4 py-3 outline-none w-full placeholder:text-lightgray focus:border-black transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="text-sm text-lightgray mb-2 block">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={4}
+                    className="bg-transparent border border-gray-200 rounded-lg px-4 py-3 resize-none outline-none w-full placeholder:text-lightgray focus:border-black transition-colors"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  value="Send"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-6 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+                >
+                  <span>Send Message</span>
+                  <FiSend className="text-lg" />
+                </button>
+              </form>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

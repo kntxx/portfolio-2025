@@ -31,7 +31,7 @@ const Nav = () => {
   return (
     <nav
       id="nav"
-      className={`py-5   bg-bgcol ${
+      className={`py-2   bg-bgcol ${
         isScrolled &&
         "fixed z-20  top-0 left-0 right-0 shadow-sm transition-all  "
       }`}
@@ -50,14 +50,9 @@ const Nav = () => {
               offset={-100}
               to="home"
             >
-              <Image
-                className="w-[130px] h-auto cursor-pointer"
-                src="/logo.svg"
-                width={120}
-                height={100}
-                quality={100}
-                alt="logo"
-              />
+              <h1 className="font-neue font-semibold text-[40px] md:text-[1rem]  lg:text-[2.5rem] cursor-pointer">
+                KG.
+              </h1>
             </Link>
           </motion.div>
           <div className="hidden md:flex">
@@ -65,7 +60,7 @@ const Nav = () => {
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               whileInView={"show"}
-              className="flex gap-10 font-neue font-light md:text-[1rem]  lg:text-[1.1rem] "
+              className="flex gap-10 font-neue font-bold md:text-[1rem]  lg:text-[1rem] "
             >
               {navLinks.map((items) => (
                 <li
@@ -83,6 +78,16 @@ const Nav = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/Kent_Gesoro_Intern_Cloud_Engineer_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm font-medium"
+                >
+                  Resume
+                </a>
+              </li>
             </motion.ul>
           </div>
           <motion.div

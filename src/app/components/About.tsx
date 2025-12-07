@@ -1,164 +1,172 @@
 "use client";
 
 import React from "react";
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from "react-icons/io";
-import { BiLogoReact, BiLogoTailwindCss } from "react-icons/bi";
-import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { fadeIn } from "./variants";
 import Image from "next/image";
+import { HiOutlineMail, HiOutlineAcademicCap } from "react-icons/hi";
+import { FiMapPin, FiArrowRight } from "react-icons/fi";
+import { SiMicrosoftazure } from "react-icons/si";
+
 const About = () => {
   return (
-    <section
-      className="section h-[80vh] lg:h-screen flex items-center justify-center"
-      id="about"
-    >
-      <div className="container mx-auto ">
-        <div
-          className="flex flex-col lg:flex-row 
-        lg:justify-between "
+    <section className="py-20" id="about">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          variants={fadeIn("right", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          className="text-center mb-16"
         >
-          <motion.div
-            variants={fadeIn("right", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            className="hidden lg:flex"
-          >
-            <Image
-              src="/newaboutpic.png"
-              width={380}
-              height={300}
-              quality={100}
-              priority={true}
-              alt="newaboutpic"
-              className="w-auto h-auto hover:scale-105 duration-300 transition"
-            />
-          </motion.div>
-          <div className="flex justify-center items-center">
-            <div className="md:w-[500px] flex flex-col text-center lg:text-left gap-y-5">
-              <motion.h1
-                variants={fadeIn("right", 0.2)}
-                initial="hidden"
-                whileInView={"show"}
-                className="text-[1.9rem] md:text-[2.5rem] lg:text-[2.8rem]"
-              >
-                About Me
-              </motion.h1>
+          <h1 className="text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] font-bold">
+            About Me
+          </h1>
+        </motion.div>
 
-              <motion.p
-                variants={fadeIn("right", 0.3)}
-                initial="hidden"
-                whileInView={"show"}
-                className="font-roman text-[1rem] 
-              md:text-[1.1rem]
-              lg:text-[1.2rem] tracking-wide"
-              >
-                As a college student pursuing a Bachelor of Science degree in
-                Information Technology, I have been actively expanding my skills
-                in Front-End Development.
-              </motion.p>
-              <motion.p
-                variants={fadeIn("right", 0.4)}
-                initial="hidden"
-                whileInView={"show"}
-                className="font-roman text-[1rem] 
-                 md:text-[1.1rem]
-              lg:text-[1.2rem] tracking-wide"
-              >
-                My focus has been on mastering technologies such as HTML, CSS,
-                Javascript, React, and Tailwind CSS to create engaging and
-                dynamic user experiences.
-              </motion.p>
-              <motion.div
-                variants={fadeIn("right", 0.5)}
-                initial="hidden"
-                whileInView={"show"}
-                className="flex flex-col items-center mx-auto lg:mx-0  lg:flex-row   leading-8  lg:justify-between max-w-[400px] "
-              >
-                <div className="flex flex-col">
-                  <h2
-                    className="
-                  text-[1.1rem]
+        <div className="max-w-6xl mx-auto">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            {/* Left Column - Image & Quick Info */}
+            <motion.div
+              variants={fadeIn("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              className="lg:col-span-4 flex flex-col items-center lg:items-start gap-6"
+            >
+              <div className="relative">
+                <Image
+                  src="/aboutme-picture.png"
+                  width={300}
+                  height={350}
+                  quality={100}
+                  priority={true}
+                  alt="Kent Gesoro"
+                  className="rounded-xl object-cover"
+                />
+              </div>
 
-                  md:text-[1.2rem]
-                  lg:text-[1.3rem]
-                  font-semibold
-                  text-lightgray
-                  uppercase
-                  
-                  "
-                  >
-                    name
-                  </h2>
-                  <p className="text-[1rem]  text-lightgray">
-                    Kent Joseph Gesoro
-                  </p>
+              {/* Quick Info */}
+              <div className="w-full space-y-3">
+                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                  <HiOutlineAcademicCap className="text-xl" />
+                  <div>
+                    <p className="text-xs text-lightgray">Education</p>
+                    <p className="text-sm font-medium">
+                      BSIT Cebu Technological University - Argao Campus{" "}
+                    </p>
+                  </div>
                 </div>
-                <div className="">
-                  <h2
-                    className="  text-[1.1rem]
-                  md:text-[1.2rem]
-                  lg:text-[1.3rem]
-                  font-semibold
-                  text-lightgray
-                  uppercase"
-                  >
-                    email
-                  </h2>
-                  <p className="text-[1rem] text-lightgray">
-                    kentatixx@gmail.com
-                  </p>
+                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                  <FiMapPin className="text-xl" />
+                  <div>
+                    <p className="text-xs text-lightgray">Location</p>
+                    <p className="text-sm font-medium">Cebu, Philippines</p>
+                  </div>
                 </div>
-              </motion.div>
-              <motion.div
-                variants={fadeIn("right", 0.6)}
-                initial="hidden"
-                whileInView={"show"}
-                className="
-                  justify-center lg:justify-start
-              flex items-center gap-x-2"
-              >
-                <p className="text-[1.2rem]">
-                  Tech <span className="ml-4 mr-3">|</span>
-                </p>
-                <IoLogoHtml5
-                  className="text-[1.1rem]
-                  md:text-[1rem]
-                lg:text-[1.8rem] transition-transform duration-200 hover:scale-150"
-                />
-                <IoLogoCss3
-                  className="text-[1.2rem]
-                md:text-[1.4rem]
-                lg:text-[1.8rem] transition-transform duration-200 hover:scale-150"
-                />
-                <IoLogoJavascript
-                  className="text-[1.3rem]
-                md:text-[1.4rem]
-                lg:text-[1.9rem] transition-transform duration-200 hover:scale-150"
-                />
-                <BiLogoReact
-                  className="text-[1.5rem]
-                md:text-[1.7rem]
-                lg:text-[1.9rem] transition-transform duration-200 hover:scale-150"
-                />
-                <TbBrandNextjs
-                  className="text-[1.5rem]
-                  md:text-[1.6rem]
-                lg:text-[1.9rem] transition-transform duration-200 hover:scale-150"
-                />
-                <TbBrandTypescript
-                  className="text-[1.3rem]
-                
-                md:text-[1.6rem]
-                lg:text-[1.7rem] transition-transform duration-200 hover:scale-150"
-                />
-                <BiLogoTailwindCss
-                  className="text-[1.6rem]
-                md:text-[1.7rem]
-                lg:text-[1.9rem] transition-transform duration-200 hover:scale-150"
-                />
-              </motion.div>
-            </div>
+                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                  <HiOutlineMail className="text-xl" />
+                  <div>
+                    <p className="text-xs text-lightgray">Email</p>
+                    <p className="text-sm font-medium">
+                      kentjoseph.gesoro@ctu.edu.ph
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Story */}
+            <motion.div
+              variants={fadeIn("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              className="lg:col-span-8 flex flex-col justify-center"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                Kent Joseph Gesoro
+              </h2>
+              <p className="text-lightgray text-sm uppercase tracking-widest mb-4">
+                Cloud Engineer
+              </p>
+
+              {/* Status Indicator */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full mb-8 w-fit">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="text-sm font-medium text-green-700">
+                  Open to Cloud Engineering Internships
+                </span>
+              </div>
+
+              {/* Story Cards */}
+              <div className="space-y-6">
+                <div className="p-6 border border-black bg-black text-white rounded-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-white/10 rounded-lg">
+                      <FiArrowRight className="text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2">Now</h3>
+                      <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                        Over the last year, I have focused on self-studying
+                        Microsoft Azure, mastering Infrastructure as Code
+                        (Terraform), and building automated CI/CD pipelines. I
+                        thrive in the space between code and operations—ensuring
+                        software is delivered reliably and securely. I am now
+                        actively seeking a Cloud Engineering internship to apply
+                        these skills in a real-world production environment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-center">
+                  <FiArrowRight className="text-xl text-lightgray -rotate-90" />
+                </div>
+
+                <div className="p-6 border border-gray-200 rounded-xl hover:border-black transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-gray-100 rounded-lg">
+                      <SiMicrosoftazure className="text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2">The Pivot</h3>
+                      <p className="text-lightgray leading-relaxed text-sm md:text-base">
+                        While working on academic projects, I realized my
+                        strengths lay in infrastructure rather than application
+                        logic. I found myself more interested in how to host,
+                        scale, and secure the application than in writing the
+                        code itself. This realization led me to pivot towards
+                        Cloud Engineering and DevOps.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-center">
+                  <FiArrowRight className="text-xl text-lightgray -rotate-90" />
+                </div>
+
+                <div className="p-6 border border-gray-200 rounded-xl hover:border-black transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-gray-100 rounded-lg">
+                      <HiOutlineAcademicCap className="text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2">The Beginning</h3>
+                      <p className="text-lightgray leading-relaxed text-sm md:text-base">
+                        I am a final-year BSIT student at Cebu Technological
+                        University. My journey began with full-stack
+                        development, building applications with the MERN stack.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
