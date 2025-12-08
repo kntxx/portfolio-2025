@@ -68,9 +68,7 @@ const About = () => {
                   <HiOutlineMail className="text-xl" />
                   <div>
                     <p className="text-xs text-lightgray">Email</p>
-                    <p className="text-sm font-medium">
-                      gesorokent@gmail.com
-                    </p>
+                    <p className="text-sm font-medium">gesorokent@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -112,12 +110,13 @@ const About = () => {
                       <h3 className="font-semibold mb-2">Now</h3>
                       <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                         Over the last year, I have focused on self-studying
-                        Microsoft Azure, mastering Infrastructure as Code
-                        (Terraform), and building automated CI/CD pipelines. I
-                        thrive in the space between code and operations—ensuring
-                        software is delivered reliably and securely. I am now
-                        actively seeking a Cloud Engineering internship to apply
-                        these skills in a real-world production environment.
+                        Microsoft Azure, building proficiency in Infrastructure
+                        as Code (Terraform), and building automated CI/CD
+                        pipelines. I thrive in the space between code and
+                        operations—ensuring software is delivered reliably and
+                        securely. I am now actively seeking a Cloud Engineering
+                        internship to apply these skills in a real-world
+                        production environment.
                       </p>
                     </div>
                   </div>

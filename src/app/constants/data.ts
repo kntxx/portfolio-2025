@@ -17,7 +17,7 @@ import {
   SiMeta,
   SiGoogle,
 } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaMicrosoft } from "react-icons/fa";
 import { TbCertificate } from "react-icons/tb";
 import { IconType } from "react-icons";
 
@@ -177,6 +177,14 @@ interface Certification {
 }
 
 export const certifications: Certification[] = [
+  {
+    name: "Introduction to Cloud Infrastructure: Describe cloud concepts",
+    issuer: "Microsoft Learn",
+    code: "Training Badges",
+    date: "2025",
+    link: "https://learn.microsoft.com/api/achievements/share/en-us/KentGesoro-3563/YPPWAJTR?sharingId=7D6FF448BFCD88C6",
+    icon: FaMicrosoft,
+  },
   {
     name: "AWS Educate: Cloud 101 & Storage",
     issuer: "Amazon Web Services",

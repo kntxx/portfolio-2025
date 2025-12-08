@@ -11,6 +11,7 @@ import { FiGithub, FiLinkedin, FiMail, FiSend } from "react-icons/fi";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [showMessage, setShowMessage] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
     if (showMessage) {
@@ -24,11 +25,12 @@ const Contact = () => {
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
+    setIsSending(true);
 
     if (form.current) {
       emailjs
         .sendForm(
-          "service_gn6ge7p",
+          "service_v6gvsyu",
           "template_qkvek19",
           form.current,
           "Bykfim08ZlZ2XXd_C"
@@ -38,9 +40,15 @@ const Contact = () => {
             console.log(result.text);
             enqueueSnackbar("Email sent successfully!", { variant: "success" });
             setShowMessage(true);
+            setIsSending(false);
+            form.current?.reset();
           },
           (error) => {
             console.log(error.text);
+            enqueueSnackbar("Failed to send email. Please try again.", {
+              variant: "error",
+            });
+            setIsSending(false);
           }
         );
     }
@@ -177,10 +185,39 @@ const Contact = () => {
                 <button
                   type="submit"
                   value="Send"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-6 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+                  disabled={isSending}
+                  className="w-full flex items-center justify-center gap-2 py-3 px-6 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-medium disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
-                  <FiSend className="text-lg" />
+                  {isSending ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Send Message</span>
+                      <FiSend className="text-lg" />
+                    </>
+                  )}
                 </button>
               </form>
             </motion.div>
