@@ -69,7 +69,7 @@ const About = () => {
                   <div>
                     <p className="text-xs text-lightgray">Email</p>
                     <p className="text-sm font-medium">
-                      kentjoseph.gesoro@ctu.edu.ph
+                      gesorokent@gmail.com
                     </p>
                   </div>
                 </div>

@@ -85,7 +85,7 @@ const Contact = () => {
               {/* Contact Links */}
               <div className="space-y-4">
                 <a
-                  href="mailto:kentatixx@gmail.com"
+                  href="mailto:gesorokent@gmail.com"
                   className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:border-black transition-colors group"
                 >
                   <div className="p-3 bg-gray-100 rounded-lg group-hover:bg-black group-hover:text-white transition-colors">
@@ -93,7 +93,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs text-lightgray">Email</p>
-                    <p className="font-medium">kentjoseph.gesoro@ctu.edu.ph</p>
+                    <p className="font-medium">gesorokent@gmail.com</p>
                   </div>
                 </a>
 
