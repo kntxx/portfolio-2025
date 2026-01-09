@@ -50,18 +50,9 @@ const Nav = () => {
               offset={-100}
               to="home"
             >
-              <div className="relative">
-                <Image
-                  src="/santa-hat.png"
-                  alt="Santa Hat"
-                  width={45}
-                  height={45}
-                  className="absolute -top-4 -left-5 rotate-[-20deg] z-10"
-                />
-                <h1 className="font-neue font-semibold text-[40px] md:text-[1rem]  lg:text-[2.5rem] cursor-pointer">
-                  KG.
-                </h1>
-              </div>
+              <h1 className="font-neue font-semibold text-[40px] md:text-[1rem]  lg:text-[2.5rem] cursor-pointer">
+                KG.
+              </h1>
             </Link>
           </motion.div>
           <div className="hidden md:flex">
