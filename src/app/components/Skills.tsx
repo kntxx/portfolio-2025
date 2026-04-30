@@ -17,10 +17,10 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h1 className="text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] font-bold">
-            Skills & Certifications
+            Skills & Training
           </h1>
           <p className="text-lightgray text-sm md:text-base mt-2">
-            Technologies I work with and credentials I've earned
+           Cloud tools, Azure administration topics, and infrastructure support skills
           </p>
         </motion.div>
 
@@ -60,7 +60,7 @@ const Skills = () => {
           className="max-w-4xl mx-auto"
         >
           <h3 className="text-lg font-semibold mb-8 text-center">
-            Certifications
+            Training & Certifications
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {certifications.map((cert) => (

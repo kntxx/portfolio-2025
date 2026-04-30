@@ -2,22 +2,27 @@ import {
   SiMicrosoftazure,
   SiTerraform,
   SiGithubactions,
-  SiPython,
   SiLinux,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiJavascript,
-  SiNodedotjs,
-  SiFigma,
-  SiMongodb,
-  SiGit,
+  SiPowershell,
   SiUdemy,
   SiMeta,
   SiGoogle,
 } from "react-icons/si";
-import { FaAws, FaMicrosoft } from "react-icons/fa";
+import {
+  FaAws,
+  FaMicrosoft,
+  FaLock,
+  FaChartLine,
+  FaDatabase,
+  FaServer,
+  FaNetworkWired,
+  FaShieldAlt,
+  FaGlobe,
+  FaTerminal,
+  FaWindows,
+  FaRoute,
+  FaBolt,
+} from "react-icons/fa";
 import { TbCertificate } from "react-icons/tb";
 import { IconType } from "react-icons";
 
@@ -142,27 +147,33 @@ export const skillCategories: SkillCategory[] = [
       { name: "Microsoft Azure", icon: SiMicrosoftazure },
       { name: "Terraform", icon: SiTerraform },
       { name: "GitHub Actions", icon: SiGithubactions },
+      { name: "Azure Functions", icon: FaBolt },
+      { name: "App Service", icon: FaServer },
+      { name: "Cosmos DB", icon: FaDatabase },
+      { name: "Key Vault", icon: FaLock },
+      { name: "Azure Monitor", icon: FaChartLine },
+      { name: "Storage Account", icon: FaDatabase },
     ],
   },
   {
-    title: "Frontend",
+    title: "Azure Administration",
     skills: [
-      { name: "React.js", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Virtual Machines", icon: FaServer },
+      { name: "Virtual Networks", icon: FaNetworkWired },
+      { name: "NSGs", icon: FaShieldAlt },
+      { name: "DNS", icon: FaGlobe },
+      { name: "Azure CLI", icon: FaTerminal },
+      { name: "PowerShell", icon: SiPowershell },
     ],
   },
   {
-    title: "Backend & Tools",
+    title: "Systems & Networking",
     skills: [
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "Git", icon: SiGit },
-      { name: "Figma", icon: SiFigma },
-      { name: "Python", icon: SiPython },
       { name: "Linux", icon: SiLinux },
+      { name: "Windows Server", icon: FaWindows },
+      { name: "TCP/IP", icon: FaNetworkWired },
+      { name: "DHCP", icon: FaServer },
+      { name: "LAN/WAN", icon: FaRoute },
     ],
   },
 ];
@@ -177,6 +188,14 @@ interface Certification {
 }
 
 export const certifications: Certification[] = [
+   {
+    name: "Azure Administrator Associate (AZ-104)",
+    issuer: "Microsoft Learn / Udemy • Course in Progress",
+    code: "Target Exam: July 2026",
+    date: "2026",
+    link: "#",
+    icon: SiMicrosoftazure,
+  },
   {
     name: "Introduction to Cloud Infrastructure: Describe cloud concepts",
     issuer: "Microsoft Learn",
@@ -185,6 +204,7 @@ export const certifications: Certification[] = [
     link: "https://learn.microsoft.com/api/achievements/share/en-us/KentGesoro-3563/YPPWAJTR?sharingId=7D6FF448BFCD88C6",
     icon: FaMicrosoft,
   },
+ 
   {
     name: "AWS Educate: Cloud 101 & Storage",
     issuer: "Amazon Web Services",

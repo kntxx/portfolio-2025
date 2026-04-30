@@ -48,7 +48,7 @@ const Hero = () => {
               className="w-[250px] md:w-[350px]   lg:w-[450px] lg:h-full hover:rotate-12 transition duration-300"
             /> */}
             <h2 className="font-normal w-full text-lightgray tracking-normal text-[22px] md:text-[24px] lg:text-[32px] leading-tight mt-4">
-              Aspiring Cloud Engineer seeking internship opportunities.
+              Aspiring Azure Cloud Engineer
             </h2>
           </motion.div>
         </div>
