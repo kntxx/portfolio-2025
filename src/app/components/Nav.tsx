@@ -80,7 +80,7 @@ const Nav = () => {
               ))}
               <li>
                 <a
-                  href="/Kent_Gesoro_Intern_Cloud_Engineer_Resume.pdf"
+                  href="/Kent_Gesoro_Junior_Azure_Cloud_Engineer_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm font-medium"
