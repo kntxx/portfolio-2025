@@ -7,6 +7,7 @@ import {
   SiUdemy,
   SiMeta,
   SiGoogle,
+  SiDocker,
 } from "react-icons/si";
 import {
   FaAws,
@@ -22,6 +23,14 @@ import {
   FaWindows,
   FaRoute,
   FaBolt,
+  FaUserShield,
+  FaUsersCog,
+  FaBalanceScale,
+  FaArchive,
+  FaKey,
+  FaExchangeAlt,
+  FaCode,
+  FaBoxOpen,
 } from "react-icons/fa";
 import { TbCertificate } from "react-icons/tb";
 import { IconType } from "react-icons";
@@ -90,6 +99,22 @@ interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Secure Enterprise Infrastructure on Azure",
+    subtitle: "Multi-Environment IaaS Platform",
+    description: "Architected a secure, multi-environment (Dev/Staging/Prod) Azure infrastructure platform using Terraform, with zero-public-IP networking via Azure Bastion and NAT Gateway. Automated deployment through a GitHub Actions CI/CD pipeline with OIDC federated authentication and a manual approval gate on Production, backed by Azure Monitor and KQL-based alerting.",
+    tags: [
+      "Terraform",
+      "Azure Bastion",
+      "NAT Gateway",
+      "GitHub Actions",
+      "Azure Monitor",
+    ],
+    image: "/enterprise-Architecture.png",
+    github: "https://github.com/kntxx/project-IaC-enterprise",
+    live: ""
+  },
+  {
+    id: 2,
     title: "Azure Serverless Microservices",
     subtitle: "Serverless Login Architecture",
     description:
@@ -101,7 +126,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Azure PaaS Architecture",
     subtitle: "Tito Ride",
     description:
@@ -117,17 +142,6 @@ export const projects: Project[] = [
     github: "https://github.com/kntxx/tara-ride",
     live: "https://nice-mud-0b8289700.3.azurestaticapps.net/",
   },
-  {
-    id: 3,
-    title: "Cares Platform: PMS",
-    subtitle: "Role: UI/UX Lead & Frontend",
-    description:
-      "Led the end-to-end product design for Ramon Aboitiz Foundation Inc. (RAFI) healthcare initiative. Translated complex business requirements into high-fidelity Figma prototypes and a fully functional React.js application, delivering 100% of the requested features for patient screening. ",
-    tags: ["Figma", "React.js", "Tailwind CSS", "Enterprise UX"],
-    image: "/cares-platform.png",
-    github: "https://github.com/kntxx/cares_platform",
-    live: "https://cares-platform.vercel.app/",
-  },
 ];
 
 interface Skill {
@@ -142,38 +156,42 @@ interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Cloud & DevOps",
+    title: "Infrastructure as Code & DevOps",
     skills: [
-      { name: "Microsoft Azure", icon: SiMicrosoftazure },
-      { name: "Terraform", icon: SiTerraform },
-      { name: "GitHub Actions", icon: SiGithubactions },
-      { name: "Azure Functions", icon: FaBolt },
-      { name: "App Service", icon: FaServer },
-      { name: "Cosmos DB", icon: FaDatabase },
-      { name: "Key Vault", icon: FaLock },
-      { name: "Azure Monitor", icon: FaChartLine },
-      { name: "Storage Account", icon: FaDatabase },
-    ],
-  },
-  {
-    title: "Azure Administration",
-    skills: [
-      { name: "Virtual Machines", icon: FaServer },
-      { name: "Virtual Networks", icon: FaNetworkWired },
-      { name: "NSGs", icon: FaShieldAlt },
-      { name: "DNS", icon: FaGlobe },
+      { name: "Terraform (IaC)", icon: SiTerraform },
+      { name: "Bicep", icon: FaCode },
+      { name: "GitHub Actions (CI/CD)", icon: SiGithubactions },
+      { name: "Docker", icon: SiDocker },
+      { name: "Azure Container Registry", icon: FaBoxOpen },
       { name: "Azure CLI", icon: FaTerminal },
       { name: "PowerShell", icon: SiPowershell },
     ],
   },
   {
-    title: "Systems & Networking",
+    title: "Azure Core Services",
     skills: [
-      { name: "Linux", icon: SiLinux },
-      { name: "Windows Server", icon: FaWindows },
-      { name: "TCP/IP", icon: FaNetworkWired },
-      { name: "DHCP", icon: FaServer },
-      { name: "LAN/WAN", icon: FaRoute },
+      { name: "Microsoft Azure", icon: SiMicrosoftazure },
+      { name: "Virtual Machines", icon: FaServer },
+      { name: "App Service", icon: FaServer },
+      { name: "Azure Functions", icon: FaBolt },
+      { name: "Cosmos DB", icon: FaDatabase },
+      { name: "Storage Account", icon: FaDatabase },
+      { name: "Virtual Networks", icon: FaNetworkWired },
+      { name: "DNS", icon: FaGlobe },
+      { name: "NAT Gateway", icon: FaExchangeAlt },
+      { name: "Azure Monitor", icon: FaChartLine },
+    ],
+  },
+  {
+    title: "Security, Identity & Governance",
+    skills: [
+      { name: "Microsoft Entra ID (IAM)", icon: FaUserShield },
+      { name: "RBAC", icon: FaUsersCog },
+      { name: "Azure Policy", icon: FaBalanceScale },
+      { name: "Key Vault", icon: FaLock },
+      { name: "NSGs", icon: FaShieldAlt },
+      { name: "Azure Bastion", icon: FaKey },
+      { name: "Recovery Services Vault (Backup)", icon: FaArchive },
     ],
   },
 ];
@@ -188,7 +206,7 @@ interface Certification {
 }
 
 export const certifications: Certification[] = [
-   {
+  {
     name: "Azure Administrator Associate (AZ-104)",
     issuer: "Microsoft Learn / Udemy • Course in Progress",
     code: "Target Exam: July 2026",
@@ -204,7 +222,7 @@ export const certifications: Certification[] = [
     link: "https://learn.microsoft.com/api/achievements/share/en-us/KentGesoro-3563/YPPWAJTR?sharingId=7D6FF448BFCD88C6",
     icon: FaMicrosoft,
   },
- 
+
   {
     name: "AWS Educate: Cloud 101 & Storage",
     issuer: "Amazon Web Services",

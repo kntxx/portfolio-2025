@@ -85,11 +85,11 @@ const About = () => {
                 Kent Joseph Gesoro
               </h2>
               <p className="text-lightgray text-sm uppercase tracking-widest mb-4">
-            IT Support Intern
+                Open to Junior Cloud Engineering Roles
               </p>
 
               {/* Status Indicator */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full mb-8 w-fit">
+              {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full mb-8 w-fit">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
@@ -97,7 +97,7 @@ const About = () => {
                 <span className="text-sm font-medium text-green-700">
                   Open to Junior Cloud Engineering Roles
                 </span>
-              </div>
+              </div> */}
 
               {/* Story Cards */}
               <div className="space-y-6">
@@ -116,18 +116,14 @@ const About = () => {
                         operations—ensuring software is delivered reliably and
                         securely. I am now actively seeking a Cloud Engineering
                         internship to apply these skills in a real-world
-                        production environment. */}
-                        I am currently a final-year BSIT student and IT Tech
-                        Support Intern at Trans-Asia Shipping Lines, Inc. My
-                        experience includes network deployments Windows/Linux support, printer and NAS
-                        troubleshooting, and end-user technical support.
-                        Alongside my internship, I am studying AZ-104 and
-                        building hands-on Azure projects using Terraform, GitHub
-                        Actions, Azure Functions, Cosmos DB, Key Vault, and
-                        Application Insights. I am seeking an entry-level Azure
-                        Cloud Engineering or Cloud Support role where I can
-                        apply both my infrastructure support experience and
-                        cloud project knowledge.
+                        production environment.   */}
+                        I recently graduated with a BSIT degree from Cebu
+                        Technological University, and since then I've focused
+                        entirely on learning cloud engineering and
+                        infrastructure. I'm looking to land a Cloud Engineering
+                        role where I can bring that focus, curiosity, and
+                        hands-on understanding of infrastructure to a real
+                        production environment.
                       </p>
                     </div>
                   </div>
@@ -168,9 +164,9 @@ const About = () => {
                     <div>
                       <h3 className="font-semibold mb-2">The Beginning</h3>
                       <p className="text-lightgray leading-relaxed text-sm md:text-base">
-                        I am a final-year BSIT student at Cebu Technological
-                        University. My journey began with full-stack
-                        development, building applications with the MERN stack.
+                        I hold a BSIT degree from Cebu Technological University.
+                        My journey began with full-stack development, building
+                        applications with the MERN stack.
                       </p>
                     </div>
                   </div>
