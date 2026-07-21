@@ -99,9 +99,27 @@ interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "IaaS Three-Tier E-Commerce Application",
+    subtitle: "Autoscaling Azure Infrastructure",
+    description:
+      "Built a self-scaling three-tier e-commerce infrastructure on Azure using Terraform. Implemented a hub-spoke network with Application Gateway, Web/App VM Scale Sets, private PostgreSQL, Azure Bastion, and least-privilege NSGs. Configured Azure Monitor Autoscale and Datadog for monitoring, while GitHub Actions with OIDC automated Terraform deployments.",
+    tags: [
+      "Terraform",
+      "Azure VM Scale Sets",
+      "Datadog",
+      "Application Gateway",
+      "GitHub Actions",
+    ],
+    image: "/Iaas_three_tier_architecture.png",
+    github: "https://github.com/kntxx/IaaS-three-tier",
+    live: "",
+  },
+  {
+    id: 2,
     title: "Secure Enterprise Infrastructure on Azure",
     subtitle: "Multi-Environment IaaS Platform",
-    description: "Architected a secure, multi-environment (Dev/Staging/Prod) Azure infrastructure platform using Terraform, with zero-public-IP networking via Azure Bastion and NAT Gateway. Automated deployment through a GitHub Actions CI/CD pipeline with OIDC federated authentication and a manual approval gate on Production, backed by Azure Monitor and KQL-based alerting.",
+    description:
+      "Architected a secure, multi-environment (Dev/Staging/Prod) Azure infrastructure platform using Terraform, with zero-public-IP networking via Azure Bastion and NAT Gateway. Automated deployment through a GitHub Actions CI/CD pipeline with OIDC federated authentication and a manual approval gate on Production, backed by Azure Monitor and KQL-based alerting.",
     tags: [
       "Terraform",
       "Azure Bastion",
@@ -111,10 +129,10 @@ export const projects: Project[] = [
     ],
     image: "/enterprise-Architecture.png",
     github: "https://github.com/kntxx/project-IaC-enterprise",
-    live: ""
+    live: "",
   },
   {
-    id: 2,
+    id: 3,
     title: "Azure Serverless Microservices",
     subtitle: "Serverless Login Architecture",
     description:
@@ -123,24 +141,6 @@ export const projects: Project[] = [
     image: "/architecture-login.png",
     github: "https://github.com/kntxx/azure-serverless-terraform",
     live: "https://zealous-tree-0dccb0700.3.azurestaticapps.net/",
-  },
-
-  {
-    id: 3,
-    title: "Azure PaaS Architecture",
-    subtitle: "Tito Ride",
-    description:
-      "Engieneered a decoupled MERN stack application using Azure Static Web Apps (Frontend) and App Service (Backend). Implemented Managed Identity for keyless secutiry Cosmos DB and integrated Application Insights for obervability.",
-    tags: [
-      "Azure Static Web Apps",
-      "App Service",
-      "Managed Identity",
-      "Cosmos DB",
-      "Application Insights",
-    ],
-    image: "/tito-ride-architecture.png",
-    github: "https://github.com/kntxx/tara-ride",
-    live: "https://nice-mud-0b8289700.3.azurestaticapps.net/",
   },
 ];
 
