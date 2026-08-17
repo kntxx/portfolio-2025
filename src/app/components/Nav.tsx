@@ -80,7 +80,8 @@ const Nav = () => {
               ))}
               <li>
                 <a
-                  href="/Kent_Joseph_Gesoro_Resume.pdf"
+                  href="#"
+                  // href="/Kent_Joseph_Gesoro_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-colors text-sm font-medium"
